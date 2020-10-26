@@ -6,6 +6,12 @@
 
         
     </head>
+
+    <script>
+        function redirect(){
+            document.getElementById("Response").innerHTML = "Case Not Found";
+        }
+    </script>
     <body>
         
         
@@ -16,17 +22,18 @@
             
             <div class:"inputForm">
                <label class= "inputInfo">Enter Case Number: </label>
-               <input type="text"  id="caseNo" value="HNC">
-               <button id="find">Find</button>
+               <input type="text"  id="caseNo" value="HNC-">
+               <button id="find" onclick="redirect()">Find</button>
             </div>
             
+            <p id= "Response"></p>
          
     
-           
         
         <div> 
         <footer class="footer" id="footer">                
             <p>Copyright &copy; Lovetech Harvey Norman</p>
+            <p></p>
         </footer>
         </div>
     </body>
