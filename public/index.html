@@ -1,30 +1,69 @@
-
+<!-- firebase serve-->
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LovetechTrack</title>
-        <link rel="stylesheet" href="stylesheet.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
 
         
-    </head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>LovetechTrack</title>
 
-    <script>
-        function redirect(){
-            document.getElementById("Response").innerHTML = "Case Not Found";
-        }
-    </script>
+        <script>
+            var firebaseConfig = {
+              // TODO: Add your our config here
+            };
+            firebase.initializeApp(firebaseConfig);
+          </script>
+        
+        <script src="app.js" defer></script>
+
+        <script src="/__/firebase/8.1.1/firebase-app.js"></script>
+        <script src="/__/firebase/8.1.1/firebase-auth.js"></script>
+        <script src="/__/firebase/8.1.1/firebase-database.js"></script>
+        <script src="/__/firebase/8.1.1/firebase-messaging.js"></script>
+        <script src="/__/firebase/8.1.1/firebase-firestore.js"></script>
+
+        <script src="/__/firebase/init.js"></script>
+     
+    </head>
     <body>
         
         
-
-    
-        
-            <img src="lovetechcropped.png" alt="Lovetech" class= "EntryPic">
             
-            <div class:"inputForm">
+    
+        <section id="whenSignedOut">
+          <div style = "position: absolute; left: 90%; top: 5%;">
+            <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+          </div>
+           
+        
+          </section>
+        
+          <section id="whenSignedIn" hidden="true">
+        
+            <div id="userDetails"></div>
+            <div style = "position:absolute; left: 90%; top: 5%;">
+              <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+            </div>
+            
+        
+          </section>
+
+
+            <img src="lovetechcropped.png" alt="Lovetech" class= "EntryPic" style = "position: absolute; left: 44%; top: 15%;">
+            
+            <div class="inputForm" style = "position: absolute; left: 40%; top: 30%;">
                <label class= "inputInfo">Enter Case Number: </label>
                <input type="text"  id="caseNo" value="HNC-">
-               <button id="find" onclick="redirect()">Find</button>
+               <button id="find"  class="btn btn-danger" onclick="redirect()">Find</button>
             </div>
             
             <p id= "Response"></p>
@@ -33,11 +72,18 @@
         
         <div> 
         <footer class="footer" id="footer">                
-            <p>Copyright &copy; Lovetech Harvey Norman</p>
-            <p></p>
+            
         </footer>
         </div>
+
+        
+       
+
+
+        
+            
     </body>
 </html>
 
 
+<!-- Copyright &copy; Lovetech Harvey Norman-->
